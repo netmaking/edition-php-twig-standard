@@ -62,7 +62,7 @@ class StringLoader extends Loader {
 		$this->instance = TwigUtil::loadDebug($this->instance);
 		$this->instance = TwigUtil::loadMacros($this->instance);
 		$this->instance = TwigUtil::loadGlobalExtensions($this->instance);
-		
+		$this->instance = TwigUtil::setEscapingStrategy($this->instance);
 	}
 	
 	/**

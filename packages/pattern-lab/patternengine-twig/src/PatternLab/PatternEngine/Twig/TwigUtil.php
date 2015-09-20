@@ -75,6 +75,21 @@ class TwigUtil {
 		return $instance;
 		
 	}
+
+	/**
+	* Set escaping strategy
+	* @param  {Instance}       an instance of the twig engine
+	*
+	* @return {Instance}       an instance of the twig engine
+	*/
+	public static function setEscapingStrategy($instance) {
+		
+		$escapingStrategy = false;
+		$instance->addExtension(new \Twig_Extension_Escaper($escapingStrategy));
+		
+		return $instance;
+		
+	}
 	
 	/**
 	* Load filters for the Twig PatternEngine
